@@ -1,11 +1,16 @@
-FROM python:3.10-slim-buster
+# Python version
+FROM python:3
 
-WORKDIR /app
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-COPY requirements.txt requirements.txt
+# Set work directory
+WORKDIR /code
 
-RUN pip3 install -r requirements.txt
+# Install dependencies
+COPY requirements.txt /code/
+RUN pip install -r requirements.txt
 
-COPY . .
-
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+# Copy project
+COPY . /code/

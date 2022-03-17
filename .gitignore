@@ -21,7 +21,6 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -117,3 +116,6 @@ venv.bak/
 # js
 node_modules/
 .next/
+
+# poetry
+poetry.lock
