@@ -6,9 +6,9 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('blog.urls'),
+    path('', include('blog.urls')),
     path('', include('api.urls')),
-    path('', include('calculators.urls')
+    path('', include('calculators.urls'))
 ]
 
 if settings.DEBUG:
